@@ -32,6 +32,9 @@ aside footer p{
 #mapid{
     width: 100%;
     height: 100%;
+
+    
+    animation-delay: 150ms;
 }
 
 /*Button*/
@@ -39,6 +42,8 @@ a.create-orphanage{
     position: absolute;
     right: 4rem;
     bottom: 4rem;
+
+    z-index: 10;
 
     width: 6.4rem;
     height: 6.4rem;
@@ -64,8 +69,7 @@ a.create-orphanage:hover{
 
 .leaflet-popup-content{
     color: #0089A5;    
-    font-size: 2rem;
-    font-weight: 600;
+        
     margin: .8rem 1.2rem;
 
     display: flex;
@@ -83,6 +87,8 @@ a.create-orphanage:hover{
     display: flex;
     align-items: center;
     justify-content: center;
+
+    transition: background-color .2s;
 }
 
 .leaflet-popup-content a:hover{
@@ -94,5 +100,6 @@ a.create-orphanage:hover{
 }
 
 .leaflet-container{
-    font: 700 1.8rem/1 'Nunito', sans-serif
+    font: 700 1.8rem/1 'Nunito', sans-serif;
+    z-index: 5;
 }
