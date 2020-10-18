@@ -6,7 +6,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
 
 //Cria o icone de pin
 const icon = L.icon({
-    iconUrl: "./public/images/map-marker.svg",
+    iconUrl: "/images/map-marker.svg",
     iconSize: [58, 68],
     iconAnchor: [29, 68] 
 })
@@ -87,4 +87,20 @@ function toggleSelect(event){
     //Verificar se sim ou não
     input.value = button.dataset.value
 
+}
+
+function validate(event){
+
+    const lat = document.querySelector('[name=lat]').value
+    const lng = document.querySelector('[name=lng]').value
+    let needsLatAndLng = false
+    
+    if(lat == "" || lng == ""){
+         needsLatAndLng = true
+    }
+
+    if(needsLatAndLng){
+        event.preventDefault()
+        alert('Selecione um ponto no mapa')
+    }
 }
